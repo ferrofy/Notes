@@ -1,0 +1,209 @@
+:root {
+    --Bg_Color: #05070a;
+    --Accent_Glow: #6366f1;
+    --Secondary_Glow: #a855f7;
+    --Card_Glass: rgba(255, 255, 255, 0.03);
+    --Text_Main: #ffffff;
+    --Text_Dim: #94a3b8;
+    --Transition_Smooth: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--Bg_Color);
+    color: var(--Text_Main);
+    min-height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.Background_Blob {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.1) 40%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(100px);
+    animation: Blob_Float 25s infinite alternate ease-in-out;
+}
+
+@keyframes Blob_Float {
+    0% { transform: translate(-10%, -10%) scale(1); }
+    50% { transform: translate(30%, 15%) scale(1.1); }
+    100% { transform: translate(-5%, 25%) scale(0.9); }
+}
+
+.Hero_Section {
+    text-align: center;
+    padding: 8rem 10% 4rem;
+    animation: FadeInUp 1s ease-out;
+}
+
+.Hero_Section h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #ffffff, var(--Accent_Glow), var(--Secondary_Glow), #ffffff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 6s linear infinite;
+}
+
+@keyframes shine {
+    to { background-position: 200% center; }
+}
+
+.Hero_Section p {
+    color: var(--Text_Dim);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.Card_Grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    padding: 0 10% 6rem;
+}
+
+.Card_Box {
+    background: var(--Card_Glass);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    padding: 4rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: var(--Transition_Smooth);
+}
+
+.Card_Box:hover {
+    transform: translateY(-15px) scale(1.02);
+    background: rgba(255, 255, 255, 0.07);
+    border-color: var(--Accent_Glow);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 20px rgba(99, 102, 241, 0.15);
+}
+
+.Card_Box i {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+    background: linear-gradient(135deg, #00f2fe, #4facfe, #6366f1, #a855f7, #f43f5e);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.3));
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s ease;
+}
+
+.Card_Box:hover i {
+    transform: rotateY(360deg) scale(1.2);
+    filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.6));
+}
+
+.Card_Box h3 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.Card_Box p {
+    color: var(--Text_Dim);
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.Bottom_Nav {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.Social_Links {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.Social_Links a {
+    color: var(--Text_Dim);
+    font-size: 1.6rem;
+    transition: var(--Transition_Smooth);
+    text-decoration: none;
+}
+
+.Social_Links a:hover {
+    color: #fff;
+    transform: translateY(-8px) scale(1.2);
+    filter: drop-shadow(0 0 10px var(--Accent_Glow));
+}
+
+.Back_Btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: var(--Card_Glass);
+    color: var(--Text_Main);
+    transition: var(--Transition_Smooth);
+}
+
+.Back_Btn:hover {
+    background: var(--Accent_Glow);
+    border-color: var(--Accent_Glow);
+    box-shadow: 0 0 15px var(--Accent_Glow);
+}
+
+@keyframes FadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .Hero_Section h1 { font-size: 2.8rem; }
+    .Hero_Section { padding: 5rem 5% 3rem; }
+    .Card_Grid { 
+        padding: 0 5% 4rem; 
+        grid-template-columns: 1fr;
+    }
+    .Card_Box { padding: 3rem 1.5rem; }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--Bg_Color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--Accent_Glow);
+}
