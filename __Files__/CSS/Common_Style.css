@@ -35,14 +35,22 @@ body {
 }
 
 @keyframes Blob_Float {
-    0% { transform: translate(-10%, -10%) scale(1); }
-    50% { transform: translate(30%, 15%) scale(1.1); }
-    100% { transform: translate(-5%, 25%) scale(0.9); }
+    0% {
+        transform: translate(-10%, -10%) scale(1);
+    }
+
+    50% {
+        transform: translate(30%, 15%) scale(1.1);
+    }
+
+    100% {
+        transform: translate(-5%, 25%) scale(0.9);
+    }
 }
 
 .Hero_Section {
     text-align: center;
-    padding: 8rem 10% 4rem;
+    padding: 0 10% 4rem 3%;
     animation: FadeInUp 1s ease-out;
 }
 
@@ -60,7 +68,9 @@ body {
 }
 
 @keyframes shine {
-    to { background-position: 200% center; }
+    to {
+        background-position: 200% center;
+    }
 }
 
 .Hero_Section p {
@@ -75,7 +85,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
-    padding: 0 10% 6rem;
+    padding: 0 10% 2rem;
 }
 
 .Card_Box {
@@ -132,7 +142,7 @@ body {
 }
 
 .Bottom_Nav {
-    padding: 4rem 0;
+    padding: 1.5rem 0;
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -164,7 +174,7 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     background: var(--Card_Glass);
     color: var(--Text_Main);
     transition: var(--Transition_Smooth);
@@ -177,18 +187,34 @@ body {
 }
 
 @keyframes FadeInUp {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 768px) {
-    .Hero_Section h1 { font-size: 2.8rem; }
-    .Hero_Section { padding: 5rem 5% 3rem; }
-    .Card_Grid { 
-        padding: 0 5% 4rem; 
+    .Hero_Section h1 {
+        font-size: 2.8rem;
+    }
+
+    .Hero_Section {
+        padding: 5rem 5% 1.25rem;
+    }
+
+    .Card_Grid {
+        padding: 0 5% 4rem;
         grid-template-columns: 1fr;
     }
-    .Card_Box { padding: 3rem 1.5rem; }
+
+    .Card_Box {
+        padding: 3rem 1.5rem;
+    }
 }
 
 ::-webkit-scrollbar {

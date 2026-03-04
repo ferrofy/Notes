@@ -1,0 +1,238 @@
+:root {
+    --bg-color: #050505;
+    --card-bg: rgba(17, 17, 17, 0.6);
+    --text-main: #ffffff;
+    --text-muted: #b3b3b3;
+    --neon-primary: #00f3ff;
+    --neon-secondary: #39ff14;
+    --code-bg: #0a0a0a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, var(--bg-color) 70%);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    overflow-x: hidden;
+}
+
+.nav-bar {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+    animation: fadeInDown 0.8s ease;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(0, 243, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(0, 243, 255, 0.05);
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.back-btn:hover {
+    background: rgba(0, 243, 255, 0.1);
+    border-color: var(--neon-primary);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+    color: var(--neon-primary);
+    transform: translateX(-5px);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeInDown 1s ease;
+}
+
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--neon-primary);
+    text-shadow: 0 0 5px rgba(0, 243, 255, 0.3);
+    animation: flicker 4s infinite alternate;
+}
+
+.content-container {
+    background-color: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 3rem;
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    animation: fadeInUp 0.8s ease forwards;
+    position: relative;
+}
+
+.content-container::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 2px;
+    background: var(--neon-secondary);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--neon-secondary);
+}
+
+.note-section {
+    margin-bottom: 3rem;
+}
+
+.note-section h2 {
+    color: var(--neon-secondary);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.3);
+}
+
+.note-section h3 {
+    color: var(--neon-primary);
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.note-section p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.note-section ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.note-section li {
+    margin-bottom: 0.5rem;
+}
+
+.note-section li strong {
+    color: #fff;
+}
+
+.code-block {
+    background-color: var(--code-bg);
+    border: 1px solid #222;
+    border-left: 4px solid var(--neon-primary);
+    border-radius: 8px;
+    padding: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: #e6e6e6;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    position: relative;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.code-block code {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.highlight-green {
+    color: var(--neon-secondary);
+}
+
+.highlight-blue {
+    color: var(--neon-primary);
+}
+
+a {
+    text-decoration: none;
+    color: var(--neon-secondary);
+}
+
+@keyframes flicker {
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        text-shadow: 0 0 3px var(--neon-primary), 0 0 8px var(--neon-primary);
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .content-container {
+        padding: 1.5rem;
+    }
+
+    .note-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .note-section h3 {
+        font-size: 1.1rem;
+    }
+}

@@ -1,0 +1,51 @@
+.Banner {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.ADSTERRA_728x90_Banner {
+    display: flex;
+}
+
+.ADSTERRA_468x60_Banner {
+    display: none;
+}
+
+.ADSTERRA_320x50_Banner {
+    display: none;
+}
+
+@media (max-width: 727px) {
+    .ADSTERRA_728x90_Banner {
+        display: none;
+    }
+
+    .ADSTERRA_468x60_Banner {
+        display: flex;
+    }
+
+    .ADSTERRA_320x50_Banner {
+        display: none;
+    }
+}
+
+@media (max-width: 467px) {
+    .ADSTERRA_728x90_Banner {
+        display: none;
+    }
+
+    .ADSTERRA_468x60_Banner {
+        display: none;
+    }
+
+    .ADSTERRA_320x50_Banner {
+        display: flex;
+    }
+}
+
+.ADSTERRA_250x300_Banner {
+    display: flex;
+}
