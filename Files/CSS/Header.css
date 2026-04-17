@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --Primary: #C793F8;
+    --Header_BG: #0E0F10;
+    --Header_Nav_Color: #878588;
+    --Header_Search_Bar_BG: #151517;
+    --Header_Font_Size: 20px;
+}
+
+/* ======================================================| Main Header |====================================================== */
+header {
+    display: flex;
+    height: 10vh;
+    background-color: var(--Header_BG);
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid #1A1A1C;
+    gap: 20px;
+}
+
+/* ======================================================| Text |====================================================== */
+header h1 {
+    color: var(--Primary);
+    font-size: var(--Header_Font_Size);
+    margin: 3.5vh 0px 0px 15px;
+}
+
+/* ======================================================| Nav |====================================================== */
+header nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: large;
+}
+
+header li {
+    list-style: none;
+    color: bisque;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--Header_Nav_Color);
+    font-size: 13px;
+}
+
+header a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* ======================================================| Serach Bar |====================================================== */
+#Header_Search_Bar {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    border: 1px solid #1A1A1C;
+    background-color: var(--Header_Search_Bar_BG);
+    border-radius: 4px;
+}
+
+header input {
+    border: none;
+    background-color: var(--Search_Bar_BG);
+    height: 7vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.Search_Icon {
+    color: #8b949e;
+    margin-right: 6px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+/* ======================================================| Merged |====================================================== */
+#Heading_And_Nav {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+}
+
+#Search_And_Account {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ======================================================| Login |====================================================== */
+header img {
+    height: 25px;
+    padding: 0px 10px 0px 0px;
+}
+
+/* ======================================================| MenuBar |====================================================== */
+
+#Menu_Bar {
+    display: none;
+}
+
+/* ======================================================|---------------|====================================================== */
+/* ======================================================| 750px - Least |====================================================== */
+/* ======================================================|---------------|====================================================== */
+@media (max-width: 700px) {
+
+    #Search_And_Account {
+        display: none;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    #Menu_Bar {
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+        padding-top: 3.5vh;
+        gap: 5px;
+        width: 25px;
+    }
+
+    #Menu_Bar_Lines_1 {
+        border: 1px solid var(--Primary);
+        border-radius: 100%;
+    }
+
+    #Menu_Bar_Lines_2 {
+        border: 1px solid var(--Primary);
+        border-radius: 100%;
+    }
+
+    #Menu_Bar_Lines_3 {
+        border: 1px solid var(--Primary);
+        border-radius: 100%;
+    }
+}
