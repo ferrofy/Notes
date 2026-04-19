@@ -66,9 +66,15 @@ header a:hover {
 header input {
     border: none;
     background-color: var(--Search_Bar_BG);
+    color: #fff ;
     height: 7vh;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
+}
+
+header input:focus {
+    border: none;
+    outline: none;
 }
 
 .Search_Icon {
@@ -128,6 +134,7 @@ header img {
     #Menu_Bar_Lines_1 {
         border: 1px solid var(--Primary);
         border-radius: 100%;
+        width: 10px;
     }
 
     #Menu_Bar_Lines_2 {
@@ -138,5 +145,12 @@ header img {
     #Menu_Bar_Lines_3 {
         border: 1px solid var(--Primary);
         border-radius: 100%;
+        width: 10px;
+    }
+
+    #Menu_Side_Bar {
+        position: fixed;
+        top: 0px;
+        right: 0px;
     }
 }
