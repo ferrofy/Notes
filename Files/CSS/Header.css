@@ -29,17 +29,12 @@ header h1 {
     margin: 3.5vh 0px 0px 15px;
 }
 
-/* ======================================================| Nav |====================================================== */
+/* ======================================================| Header Nav |====================================================== */
 header nav {
     display: flex;
     gap: 10px;
     align-items: center;
     font-size: large;
-}
-
-header li {
-    list-style: none;
-    color: bisque;
 }
 
 header a {
@@ -66,7 +61,7 @@ header a:hover {
 header input {
     border: none;
     background-color: var(--Search_Bar_BG);
-    color: #fff ;
+    color: #fff;
     height: 7vh;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
@@ -99,13 +94,19 @@ header input:focus {
 
 /* ======================================================| Login |====================================================== */
 header img {
-    height: 25px;
-    padding: 0px 10px 0px 0px;
+    height: 8vh;
+    width: 8vh;
+    border: 1px solid #1A1A1C;
+    border-radius: 100%;
 }
 
 /* ======================================================| MenuBar |====================================================== */
 
 #Menu_Bar {
+    display: none;
+}
+
+#Menu_Nav {
     display: none;
 }
 
@@ -152,5 +153,12 @@ header img {
         position: fixed;
         top: 0px;
         right: 0px;
+        display: flex;
+        flex-direction: column;
     }
+     #Menu_Side_Bar #Menu_Hr{
+        border: 1px solid #1A1A1C;
+        margin-top: 10vh;
+        display: none;
+     }
 }
