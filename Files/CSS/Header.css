@@ -1,3 +1,8 @@
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -11,6 +16,10 @@
     --Header_Font_Size: 20px;
 }
 
+body{
+    background-color: #101215f5;
+}
+
 /* ======================================================| Main Header |====================================================== */
 header {
     display: flex;
@@ -20,6 +29,8 @@ header {
     font-family: Arial, Helvetica, sans-serif;
     border-bottom: 1px solid #1A1A1C;
     gap: 20px;
+    position: fixed;
+    width: 100%;
 }
 
 /* ======================================================| Text |====================================================== */
@@ -60,7 +71,7 @@ header a:hover {
 
 header input {
     border: none;
-    background-color: var(--Search_Bar_BG);
+    background-color: var(--Header_Search_Bar_BG);
     color: #fff;
     height: 7vh;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -156,9 +167,10 @@ header img {
         display: flex;
         flex-direction: column;
     }
-     #Menu_Side_Bar #Menu_Hr{
+
+    #Menu_Side_Bar #Menu_Hr {
         border: 1px solid #1A1A1C;
         margin-top: 10vh;
         display: none;
-     }
+    }
 }

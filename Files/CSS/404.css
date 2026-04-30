@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@300;400;700&family=Fira+Code:wght@400;500&display=swap');
+
+:root {
+    --Primary: #cc97ff;
+    --Secondary: #3adffa;
+    --Tertiary: #9bffce;
+    --Error: #F86C81;
+    --Error_Dim: #d73357;
+    --Background: #0e0e10;
+    --Surface: #19191c;
+    --Surface_High: #262528;
+    --Surface_Low: #000000;
+    --Outline: #48474a;
+    --Text_Muted: #adaaad;
+    --Text_On_Surface: #f9f5f8;
+    --Hacker_Green: #05ff05;
+    --Page_Loc_Color: #ffa600;
+    --Red: rgb(255, 37, 37);
+    --Cyan: #1AA7C5;
+    --Font_Body: 'Inter', sans-serif;
+    --Font_Headline: 'Space Grotesk', sans-serif;
+    --Font_Mono: 'Fira Code', monospace;
+}
+
+#Full_Error_Box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    font-family: var(--Font_Body);
+}
+
+#Not_Found_Box_Header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-family: var(--Font_Mono);
+    background-color: var(--Surface_High);
+    height: 35px;
+    width: 95%;
+    color: var(--Text_Muted);
+    font-size: small;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#Circles {
+    display: flex;
+    gap: 5px;
+    padding-left: 10px;
+    flex-shrink: 0;
+}
+
+#Circle_Red {
+    height: 10px;
+    width: 10px;
+    background-color: rgba(215, 51, 87, 0.4);
+    border-radius: 100%;
+}
+
+#Circle_Cyan {
+    height: 10px;
+    width: 10px;
+    background-color: rgba(58, 223, 250, 0.4);
+    border-radius: 100%;
+}
+
+#Circle_Green {
+    height: 10px;
+    width: 10px;
+    background-color: rgba(155, 255, 206, 0.4);
+    border-radius: 100%;
+}
+
+#Error_Text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--Font_Mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--Text_Muted);
+}
+
+#Not_Found_Box {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--Surface_Low);
+    height: 80vh;
+    width: 95%;
+    color: var(--Text_Muted);
+    font-size: small;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 30px 25px;
+    color: var(--Text_On_Surface);
+    font-size: medium;
+    font-family: var(--Font_Mono);
+}
+
+.Cyan_Text {
+    color: var(--Secondary);
+    font-size: medium;
+    font-family: var(--Font_Mono);
+}
+
+#Not_Found_Box_Heading {
+    display: flex;
+    align-items: center;
+    padding: 15px 0px 0px 0px;
+    gap: 15px;
+    font-family: var(--Font_Headline);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    text-shadow: 0 0 10px rgba(204, 151, 255, 0.4);
+}
+
+.fa-circle-exclamation {
+    font-size: 15px;
+    color: var(--Error);
+    text-shadow: 0px 0px 0px;
+}
+
+#Connection_Message {
+    border-left: 2px solid var(--Primary);
+    font-size: 25px;
+    padding-left: 50px;
+    margin-top: 10px;
+    color: var(--Primary);
+    display: flex;
+    align-items: center;
+    font-family: var(--Font_Headline);
+    font-weight: 400;
+}
+
+.Hacker_Green_Color {
+    color: var(--Hacker_Green);
+    font-family: var(--Font_Mono);
+}
+
+.Primary_Color {
+    color: var(--Primary);
+    font-family: var(--Font_Mono);
+}
+
+#Page_Loc {
+    color: var(--Page_Loc_Color);
+    font-family: var(--Font_Mono);
+}
+
+.Red_Color {
+    color: var(--Red);
+    font-family: var(--Font_Mono);
+}
+
+#Sys_Logs {
+    padding: 30px 0px;
+    font-size: larger;
+    font-family: var(--Font_Mono);
+    line-height: 2;
+}
+
+@media (max-width: 768px) {
+    #Not_Found_Box_Header {
+        width: 100%;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+
+    #Not_Found_Box {
+        width: 100%;
+        height: auto;
+        min-height: 70vh;
+        padding: 20px 15px;
+        font-size: small;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+
+    #Not_Found_Box_Heading {
+        font-size: 1.4rem;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    #Connection_Message {
+        font-size: 1rem;
+        padding-left: 20px;
+    }
+
+    #Sys_Logs {
+        font-size: medium;
+        line-height: 1.8;
+    }
+
+    #Error_Text {
+        font-size: 8px;
+        letter-spacing: 0.12em;
+    }
+}
+
+@media (max-width: 480px) {
+    #Full_Error_Box {
+        padding: 5px 0px;
+    }
+
+    #Not_Found_Box {
+        padding: 15px 10px;
+    }
+
+    #Not_Found_Box_Heading {
+        font-size: 1.1rem;
+    }
+
+    #Connection_Message {
+        font-size: 0.9rem;
+        padding-left: 12px;
+    }
+
+    #Sys_Logs {
+        font-size: small;
+        line-height: 1.6;
+    }
+}

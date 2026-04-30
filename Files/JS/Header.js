@@ -35,8 +35,8 @@ for (let Index = 0; Index < Nav_Items_List.length; Index++) {
     Item_Header.textContent = Nav_Items_List[Index].Title
     Item_Menu.textContent = Nav_Items_List[Index].Title
     
-    Item_Header.href = Nav_Items_List[Index].Href
-    Item_Menu.href = Nav_Items_List[Index].Href
+    Item_Header.href = Nav_Items_List[Index].href
+    Item_Menu.href = Nav_Items_List[Index].href
 
     Nav_Bar_Heading.appendChild(Item_Header)
     Nav_Bar_Menu.appendChild(Item_Menu)
