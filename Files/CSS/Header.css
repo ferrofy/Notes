@@ -8,15 +8,7 @@ html {
     margin: 0;
 }
 
-:root {
-    --Primary: #C793F8;
-    --Header_BG: #0E0F10;
-    --Header_Nav_Color: #878588;
-    --Header_Search_Bar_BG: #151517;
-    --Header_Font_Size: 20px;
-}
-
-body{
+body {
     background-color: #101215f5;
 }
 
@@ -85,9 +77,9 @@ header input:focus {
 
 .Search_Icon {
     color: #8b949e;
-    margin-right: 6px;
+    margin: 0px 6px 0px 0px;
     font-size: 14px;
-    padding-left: 10px;
+    padding: 0px 0px 0px 10px;
 }
 
 /* ======================================================| Merged |====================================================== */
@@ -137,8 +129,8 @@ header img {
     #Menu_Bar {
         display: flex;
         flex-direction: column;
-        margin-right: 10px;
-        padding-top: 3.5vh;
+        margin: 0px 10px 0px 0px;
+        padding: 3.5vh 0px 0px 0px;
         gap: 5px;
         width: 25px;
     }
@@ -170,7 +162,7 @@ header img {
 
     #Menu_Side_Bar #Menu_Hr {
         border: 1px solid #1A1A1C;
-        margin-top: 10vh;
+        margin: 10vh 0px 0px 0px;
         display: none;
     }
 }

@@ -1,0 +1,31 @@
+:root {
+    --Primary: #C793F8;
+    --Secondary: #3adffa;
+    --Tertiary: #9bffce;
+    --Error: #F86C81;
+    --Error_Dim: #d73357;
+    --Background: #0e0e10;
+    --Surface: #19191c;
+    --Surface_High: #262528;
+    --Surface_Low: #000000;
+    --Outline: #48474a;
+    --Text_Muted: #a9b1d6;
+    --Text_On_Surface: #f9f5f8;
+    --Hacker_Green: #05ff05;
+    --Page_Loc_Color: #ffa600;
+    --Red: rgb(255, 37, 37);
+    --Cyan: #1AA7C5;
+    --Font_Body: 'Inter', sans-serif;
+    --Font_Headline: 'Space Grotesk', sans-serif;
+    --Font_Mono: 'Fira Code', monospace;
+    --Footer_BG: #0E0F10;
+    --Header_Font_Size: 20px;
+    --Header_BG: #0E0F10;
+    --Header_Nav_Color: #878588;
+    --Header_Search_Bar_BG: #151517;
+    --Card_BG_Color: #1a1b26;
+    --Card_Hover_Color: #24283b;
+    --Card_Border_Color: rgba(255, 255, 255, 0.1);
+    --Neon_Accent: #7aa2f7;
+    --Accent_Green: #9ece6a;
+}

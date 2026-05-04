@@ -1,27 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@300;400;700&family=Fira+Code:wght@400;500&display=swap');
 
-:root {
-    --Primary: #cc97ff;
-    --Secondary: #3adffa;
-    --Tertiary: #9bffce;
-    --Error: #F86C81;
-    --Error_Dim: #d73357;
-    --Background: #0e0e10;
-    --Surface: #19191c;
-    --Surface_High: #262528;
-    --Surface_Low: #000000;
-    --Outline: #48474a;
-    --Text_Muted: #adaaad;
-    --Text_On_Surface: #f9f5f8;
-    --Hacker_Green: #05ff05;
-    --Page_Loc_Color: #ffa600;
-    --Red: rgb(255, 37, 37);
-    --Cyan: #1AA7C5;
-    --Font_Body: 'Inter', sans-serif;
-    --Font_Headline: 'Space Grotesk', sans-serif;
-    --Font_Mono: 'Fira Code', monospace;
-}
-
 #Full_Error_Box {
     display: flex;
     align-items: center;
@@ -48,7 +26,7 @@
 #Circles {
     display: flex;
     gap: 5px;
-    padding-left: 10px;
+    padding: 0px 0px 0px 10px;
     flex-shrink: 0;
 }
 
@@ -126,8 +104,8 @@
 #Connection_Message {
     border-left: 2px solid var(--Primary);
     font-size: 25px;
-    padding-left: 50px;
-    margin-top: 10px;
+    padding: 0px 0px 0px 50px;
+    margin: 10px 0px 0px 0px;
     color: var(--Primary);
     display: flex;
     align-items: center;
@@ -187,7 +165,7 @@
 
     #Connection_Message {
         font-size: 1rem;
-        padding-left: 20px;
+        padding: 0px 0px 0px 20px;
     }
 
     #Sys_Logs {
@@ -216,7 +194,7 @@
 
     #Connection_Message {
         font-size: 0.9rem;
-        padding-left: 12px;
+        padding: 0px 0px 0px 12px;
     }
 
     #Sys_Logs {
