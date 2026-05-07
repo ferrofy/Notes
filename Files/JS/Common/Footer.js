@@ -24,12 +24,10 @@ const Icon_Share = document.getElementById("Icon_Share");
 for (let Index = 0; Index < Quick_Link_List.length; Index++) {
 
     let Item = document.createElement("a")
-    let Item_2 = document.createElement("br")
 
     Item.textContent = Quick_Link_List[Index].Title
     Item.href = Quick_Link_List[Index].href
 
-    Footer_Quick_Link.appendChild(Item_2)
     Footer_Quick_Link.appendChild(Item)
 }
 
